@@ -1,0 +1,160 @@
+:root {
+  --primary: rgba(39, 212, 166, 1);
+  --gradient-blue: rgba(54, 182, 235, 1);
+}
+
+/* utils */
+.btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  opacity: 0.8;
+}
+.fw-600 {
+  font-weight: 600;
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+.nice-select .current {
+  color: var(--primary) !important;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+main.wrapper {
+  background: rgb(54, 182, 235);
+  background: linear-gradient(
+    180deg,
+    rgba(54, 182, 235, 1) 0%,
+    rgba(39, 212, 166, 1) 100%
+  );
+}
+
+main.loginWrapper {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.dashboard_userProfile {
+  text-align: center;
+}
+
+.dashboard_userProfile img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 14px;
+}
+
+.dashboard_userProfile h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dashboard_userProfile p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.featureCard {
+  border-radius: 10px;
+}
+
+.featureCard .card-body {
+  padding: 1.6rem;
+  text-align: center;
+}
+
+.featureCard img {
+  width: 100%;
+}
+
+.featureCard h5 {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.feeCard {
+  background: url("https://swall.teahub.io/photos/small/95-956642_white-minimalist-mac.jpg")
+    center center no-repeat;
+  background-size: cover;
+  padding: 40px 50px 10px 50px;
+}
+
+.contactUs {
+  padding: 1rem;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contactUs p {
+  width: 60%;
+}
+
+.contactUs img {
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.studentsTable {
+  padding: 0 2rem;
+  border-radius: 10px;
+}
+
+.tableHead {
+  padding: 0.6rem 0;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.tableHead .th {
+  font-weight: 700;
+}
+
+.table .avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.table > :not(:first-child) {
+  border-top: none;
+}
+
+@media (max-width: 991px) {
+  .featureCard {
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .studentsTable {
+    overflow-x: scroll;
+  }
+
+  .tableHead,
+  .tableBody {
+    min-width: 800px;
+  }
+}

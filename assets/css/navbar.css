@@ -1,0 +1,28 @@
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-nav .nav-item .nav-link .notifyDot {
+  color: crimson;
+  font-size: 8px;
+
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-nav .nav-item .nav-link .notifyDot {
+    top: 12px;
+    right: 2px;
+  }
+}

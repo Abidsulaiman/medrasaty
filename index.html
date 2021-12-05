@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <title>Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/css/sidebar.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/dashboard.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav
+      class="
+        navbar navbar-expand-lg navbar-light
+        bg-white
+        sticky-top
+        shadow-sm
+        px-4
+      "
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">MedraSaty</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <div
+              class="
+                d-flex
+                align-items-center
+                justify-content-center
+                languageSelect
+              "
+            >
+              <label>Language:</label>
+              <select
+                class="w-auto border-0"
+                aria-label="Default select example"
+              >
+                <option value="1">English</option>
+                <option value="2">Arabic</option>
+                <option value="3">Chinese</option>
+              </select>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-bell fs-5"></i>
+                <i class="bi bi-circle-fill notifyDot"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-box-arrow-right fs-5"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav
+          id="sidebarMenu"
+          class="col-md-3 col-lg-2 d-md-block sidebar collapse"
+        >
+          <div class="position-sticky mt-5">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="bi bi-layout-split me-2"></i>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-person me-2"></i>
+                  Profiles
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown mb-0"
+                  data-bs-toggle="collapse"
+                  href="#feePayment"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="feePayment"
+                >
+                  <i class="bi bi-currency-dollar me-2"></i>
+                  Fee Payment
+                </a>
+                <div class="collapse" id="feePayment">
+                  <ul
+                    class="
+                      btn-toggle-nav
+                      list-unstyled
+                      fw-normal
+                      pb-1
+                      small
+                      px-4
+                    "
+                  >
+                    <li><a href="#" class="link-light rounded">Overview</a></li>
+                    <li><a href="#" class="link-light rounded">Updates</a></li>
+                    <li><a href="#" class="link-light rounded">Reports</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown mb-0"
+                  data-bs-toggle="collapse"
+                  href="#activity"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="activity"
+                >
+                  <i class="bi bi-card-list me-2"></i>
+                  Activity
+                </a>
+                <div class="collapse" id="activity">
+                  <ul
+                    class="
+                      btn-toggle-nav
+                      list-unstyled
+                      fw-normal
+                      pb-1
+                      small
+                      px-4
+                    "
+                  >
+                    <li><a href="#" class="link-light rounded">Overview</a></li>
+                    <li><a href="#" class="link-light rounded">Updates</a></li>
+                    <li><a href="#" class="link-light rounded">Reports</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-calendar3 me-2"></i>
+                  Attendance
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-journal-text me-2"></i>
+                  Time table
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 p-md-4 px-md-5">
+          <div
+            class="
+              d-flex
+              justify-content-center justify-content-lg-between
+              flex-wrap flex-md-nowrap
+              align-items-center
+              pt-3
+              pb-2
+              mb-3
+            "
+          >
+            <h1 class="h4 fw-bold">Dashboard</h1>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="dashboard_userProfile">
+                <img
+                  src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=113"
+                  alt="userImage"
+                />
+                <h4>Muhammad Nabil</h4>
+                <p>muhammad@gmail.com</p>
+                <p>+965 12 356 7809</p>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="card border-0 shadow featureCard">
+                    <div class="card-body">
+                      <img
+                        src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-assignment-icon-png-image_924510.jpg"
+                        alt="profileIcon"
+                      />
+                      <h5 class="mb-0 mt-4">Profiles</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card border-0 shadow featureCard">
+                    <div class="card-body">
+                      <img
+                        src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-assignment-icon-png-image_924510.jpg"
+                        alt="profileIcon"
+                      />
+                      <h5 class="mb-0 mt-4">Fee payment</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-3">
+                <div class="col-md-6">
+                  <div class="card border-0 shadow featureCard">
+                    <div class="card-body">
+                      <img
+                        src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-assignment-icon-png-image_924510.jpg"
+                        alt="profileIcon"
+                      />
+                      <h5 class="mb-0 mt-4">Profiles</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card border-0 shadow featureCard">
+                    <div class="card-body">
+                      <img
+                        src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-assignment-icon-png-image_924510.jpg"
+                        alt="profileIcon"
+                      />
+                      <h5 class="mb-0 mt-4">Fee payment</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="card border-0 rounded feeCard">
+                    <h3>KD 2000</h3>
+                    <p>Total fee outstanding</p>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="contactUs">
+                    <p>
+                      We are here to help and answer any question you might
+                      have. We look forward to hearing from you
+                    </p>
+                    <img
+                      src="https://img.freepik.com/free-vector/invoice-concept-illustration_114360-2485.jpg?size=338&ext=jpg"
+                      alt=""
+                    />
+                    <button class="btn btn-primary py-2 px-5">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="table studentsTable card mt-4">
+                <div class="tableHead bg-light">
+                  <div class="row px-1 py-1 g-0">
+                    <div class="col-4 th">Students</div>
+                    <div class="col th">Grade</div>
+                    <div class="col th">School</div>
+                    <div class="col th">Outstanding fee</div>
+                  </div>
+                </div>
+
+                <div class="tableBody my-4">
+                  <div
+                    class="
+                      row
+                      px-1
+                      py-2
+                      g-0
+                      border-bottom
+                      align-items-center
+                      tr
+                    "
+                  >
+                    <div class="col-4">
+                      <div class="d-flex align-items-center">
+                        <img
+                          src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=113"
+                          class="avatar"
+                          alt="Asim muhammad"
+                        />
+                        <div class="ms-3">
+                          <h6 class="mb-1 fw-bold">Asim Muhammad</h6>
+                          <p class="mb-0">ST7574321098</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">Year 1</div>
+                    <div class="col">The English Academy</div>
+                    <div class="col">KD 1020</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- JavaScript libraries; -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+      integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/niceSelect.js"></script>
+  </body>
+</html>
